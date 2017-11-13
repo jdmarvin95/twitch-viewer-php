@@ -1,0 +1,39 @@
+#view-list {
+	border: 1px solid black;
+	width: 100%;
+}
+
+#view-list caption {
+	text-align: center;
+}
+
+#view-list tr td:first-child {
+	border-top: 1px solid black;
+	border-right: none;
+}
+
+#view-list tr td {
+	border-right: none;
+}
+
+#view-list td {
+	padding: 10px 10px;
+	border-right: 1px solid black;
+	border-bottom: 1px solid black;
+}
+
+.logo {
+	height: 75px;
+}
+
+#view-list p {
+	padding-top: 12px;
+}
+
+.remove-icon {
+	height: 20px;
+}
+
+.remove-icon:hover {
+	cursor: pointer;
+}

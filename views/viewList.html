@@ -1,0 +1,23 @@
+<div class="container" ng-controller="ViewListController" ng-init="getDBData()">
+	<div class="sort">
+		<h2>Sort by:</h2>
+		<button class="sort-btn" id="sort-name" ng-click="sortByName()"><img class="sort-icon" src="img/sortIcon.svg" />Name</button>
+		<button class="sort-btn" id="sort-online" ng-click="sortByOnline()"><img class="sort-icon" src="img/sortIcon.svg" />Online</button>
+		<button class="sort-btn" id="sort-game" ng-click="sortByGame()"><img class="sort-icon" src="img/sortIcon.svg" />Game</button>
+	</div>
+	<table id="view-list">
+		<caption><b>Streamers</b></caption>
+		<tbody>
+			<tr ng-repeat="streamer in streamers">
+				<td><a ng-href="{{ streamer.link }}"><img class="logo" ng-src="{{ streamer.logo }}" /></a></td>
+				<td><a ng-href="{{ streamer.link }}"><p>{{ streamer.dispName }}</p></a></td>
+				<td><p>{{ streamer.status }}</p></td>
+				<td><p>{{ streamer.game }}</p></td>
+				<td><a id="{{ $index }}" ng-click="removeStreamer($index)"><img class="remove-icon" src="img/removeIcon.svg" title="Remove" /></a></td>
+			</tr>
+			<tr class="add-streamer">
+				<td><input id="add-name-box" type="text" /><input id="add-name-btn" type="button" value="Add" ng-click="addStreamer()" /><span id="add-message"></span></td>
+			</tr>
+		</tbody>
+	</table>
+</div>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>Twitch Viewer</title>
+
+		<!-- CSS -->
+		<link rel="stylesheet" href="css/lib/bootstrap.min.css" />
+		<link rel="stylesheet" href="css/main.css" />
+
+		<!-- JavaScript Libraries -->
+		<script type="text/javascript" src="js/lib/angular.min.js"></script>
+		<script type="text/javascript" src="js/lib/angular-route.min.js"></script>
+	</head>
+
+	<body ng-app="twitchApp" controller="MainController">
+		<nav class="navbar navbar-default">
+			<div class="container">
+				<div class="navbar-header">
+					<a class="navbar-brand" href="#/!">Twitch Viewer</a>
+				</div>
+				<div id="navbar">
+					<ul class="nav navbar-nav navbar-right">
+						<li><a class="nav-btn" href="#!viewList">View List</a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+
+		<div ng-view></div>
+	</body>
+
+	<!-- JavaScript -->
+
+	<!-- Modules -->
+	<script type="text/javascript" src="js/app.js"></script>
+
+	<!-- Controllers -->
+	<script type="text/javascript" src="js/controllers/MainController.js"></script>
+	<script type="text/javascript" src="js/controllers/ViewListController.js"></script>
+
+	<!-- Services -->
+	<script type="text/javascript" src="js/services/GetTwitchInfo.js"></script>
+
+	<!-- Directives -->
+
+</html>
