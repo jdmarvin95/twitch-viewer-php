@@ -1,7 +1,7 @@
 <?php
 	define('DB_HOST', 'localhost');
 	define('DB_USER', 'jdmarvin95');
-	define('DB_PASS', 'Slipknot95!');
+	define('DB_PASS', '');
 	define('DB_DATABASE', 'streamers');
 
 	function connect() {
